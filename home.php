@@ -4,7 +4,6 @@ if(!isset($_SESSION['user_id'])) header("Location: login.php");
 require 'db.php';
 include 'header.php';
 
-// Fetch all posts with user name, order by post id descending
 $posts = $pdo->query("
     SELECT posts.*, users.name 
     FROM posts 
@@ -16,7 +15,7 @@ $posts = $pdo->query("
 <h2>Welcome, <?= $_SESSION['name'] ?></h2>
 
 <?php foreach($posts as $p): ?>
-<div class="card mb-3">
+<div class="card mb-3 shadow">
   <div class="card-body">
     <h5 class="card-title"><?= $p['title'] ?></h5>
     <h6 class="card-subtitle mb-2 text-muted">By <?= $p['name'] ?> | <?= $p['created_at'] ?></h6>

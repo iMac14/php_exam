@@ -10,10 +10,11 @@ if($_POST){
     header("Location: home.php");
 }
 ?>
+
 <div class="row justify-content-center">
   <div class="col-md-8">
-    <div class="card">
-      <div class="card-header"><h4>Create Post</h4></div>
+    <div class="card shadow">
+      <div class="card-header bg-success text-white"><h4>Create Post</h4></div>
       <div class="card-body">
         <form method="POST">
           <div class="form-group">
@@ -28,4 +29,5 @@ if($_POST){
     </div>
   </div>
 </div>
+
 <?php include 'footer.php'; ?>
